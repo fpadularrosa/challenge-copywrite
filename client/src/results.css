@@ -1,0 +1,20 @@
+.container-results{
+    margin: 0px 100px 20px 130px;
+    width: 930px;
+    height: 480px;
+    padding: 30px;
+    background-color: white;
+}
+
+.results{
+    margin: 5vh 200px;
+}
+
+h3{
+    color:rgb(109, 108, 108);
+}
+
+.text{
+    border: 2px solid rgb(160, 160, 160);
+    height: 33px;
+}
