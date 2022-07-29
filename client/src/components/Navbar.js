@@ -1,22 +1,21 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
-import getText from '../redux/actions'
 import '../navbar.css'
+import getText from '../redux/actions'
+import validate_input from '../utils'
 
 const Navbar = () => {
   const [input, setInput] = useState('')
-  const dispatch = useDispatch()
-
+  const dispatch = useDispatch() 
   const handleChange = (e) => {
     setInput(e.target.value)
   }
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    if (input) {
-      dispatch(getText(input))
-      setInput('')
-    };
+    validate_input(input)
+    dispatch(getText(input))
+    setInput('')
   }
 
   return (

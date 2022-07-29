@@ -293,7 +293,8 @@ module.exports = function (webpackEnv) {
     },
     resolve: {
       fallback: { 
-       "os": require.resolve('os-browserify/'), 
+        "fs": false,
+        "os": require.resolve('os-browserify/'), 
         "path": require.resolve('path-browserify/')
       },
       // This allows you to set a fallback for where webpack should look for modules.
@@ -336,7 +337,7 @@ module.exports = function (webpackEnv) {
           babelRuntimeEntry,
           babelRuntimeEntryHelpers,
           babelRuntimeRegenerator,
-        ]),
+        ])
       ],
     },
     module: {
